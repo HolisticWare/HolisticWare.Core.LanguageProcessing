@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.LanguageProcessing", "Core.LanguageProcessing\Core.LanguageProcessing.csproj", "{C9C215DA-4F81-4F81-9B05-AC64AD52114F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests.Core.LanguageProcessing", "UnitTests.Core.LanguageProcessing\UnitTests.Core.LanguageProcessing.csproj", "{90B32DED-628B-49A9-8AED-037E4E911C38}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{90B32DED-628B-49A9-8AED-037E4E911C38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90B32DED-628B-49A9-8AED-037E4E911C38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90B32DED-628B-49A9-8AED-037E4E911C38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90B32DED-628B-49A9-8AED-037E4E911C38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9C215DA-4F81-4F81-9B05-AC64AD52114F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9C215DA-4F81-4F81-9B05-AC64AD52114F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9C215DA-4F81-4F81-9B05-AC64AD52114F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9C215DA-4F81-4F81-9B05-AC64AD52114F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
