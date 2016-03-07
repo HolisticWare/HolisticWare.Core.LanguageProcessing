@@ -1,0 +1,3 @@
+[submodule "external/Samples.Data.Porting"]
+	path = external/Samples.Data.Porting
+	url = https://github.com/moljac/Samples.Data.Porting.git
