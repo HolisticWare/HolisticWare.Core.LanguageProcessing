@@ -1,0 +1,34 @@
+%YAML 1.2
+---
+version: 2.4.1
+name: Pinterest SDK
+id: pinterestsdk
+publisher: Xamarin Inc.
+publisher-url: http://xamarin.com
+summary: Pinterest SDK for iOS and Android enables the use of Pinterest SDK in Xamarin mobile applications
+license: ./License.md
+details: ./Details.md
+getting-started: ./GettingStarted.md
+icons: 
+  - ./icons/icon_128x128.png
+  - ./icons/icon_512x512.png
+libraries: 
+  android: 
+    - ../source/Xamarin.Pinterest.Bindings.XamarinAndroid/bin/Release/Xamarin.Pinterest.Bindings.dll
+  ios-unified: 
+    - ../source/Xamarin.Pinterest.Bindings.XamarinIOS/bin/Release/Xamarin.Pinterest.Bindings.dll
+  ios: 
+    - ../source/Xamarin.Pinterest.Bindings.XamarinIOS-Classic/bin/Release/Xamarin.Pinterest.Bindings.dll
+samples:
+  - name: "Android Sample"
+    path: ../samples/Xamarin.Traditional.Standard/Pinterest.Sample.Traditional.Standard.XamarinAndroid.sln
+  - name: "iOS Unified Sample"
+    path: ../samples/Xamarin.Traditional.Standard/Pinterest.Sample.Traditional.Standard.XamarinIOS.sln
+  - name: "iOS Classic Sample"
+    path: ../samples/Xamarin.Traditional.Standard/Pinterest.Sample.Traditional.Standard.XamarinIOS-Classic.sln
+build:
+  - ../source/Xamarin.Pinterest.Bindings.sln
+  - ../samples/Xamarin.Traditional.Standard/Pinterest.Samples.Traditional.Standard.sln
+  - ../samples/Xamarin.Traditional.Standard/Pinterest.Sample.Traditional.Standard.XamarinAndroid.sln
+  - ../samples/Xamarin.Traditional.Standard/Pinterest.Sample.Traditional.Standard.XamarinIOS.sln
+  - ../samples/Xamarin.Traditional.Standard/Pinterest.Sample.Traditional.Standard.XamarinIOS-Classic.sln
