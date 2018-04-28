@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+
 using System.IO;
 
-namespace Core.LanguageProcessing
+namespace Core.LanguageProcessing.Analysis.Lexical
 {
 	public interface IScanner 
 	{
-		IEnumerable<Token> Scan(TextReader reader);
+		IEnumerable<Lexeme> Scan(TextReader reader);
 	}
 }
 

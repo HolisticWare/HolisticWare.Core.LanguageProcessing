@@ -33,7 +33,17 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="LexicalStructure.cs" />
+    <Compile Include="CSharp\LexicalStructure.cs" />
+    <Compile Include="CSharpScanner.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\Core.LanguageProcessing.csproj">
+      <Project>{C9C215DA-4F81-4F81-9B05-AC64AD52114F}</Project>
+      <Name>Core.LanguageProcessing</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="CSharp\" />
+  </ItemGroup>
 </Project>

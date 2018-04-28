@@ -2,7 +2,7 @@
 
 namespace Core.LanguageProcessing.CSharp
 {
-	public partial class LexicalStructure
+	public partial class LexicalStructure : Core.LanguageProcessing.Analysis.Lexical.LexicalStructure
 	{
 		public string[] Tokens = null;
 
@@ -90,22 +90,10 @@ namespace Core.LanguageProcessing.CSharp
 		};
 		
 
-		public string[] TokensPunctuators = new string[] 
-		{
-			"{",
-			"}",
-			"[",
-			"]",     
-			"(",
-			")",
-			".",
-			",",
-			":",
-			";",
-		};
 
 		public string[] TokensOperators = new string[] 
 		{
+			"\ud83c\udded\ud83c\uddf7",
 			"+",
 			"-",
 			"*",
@@ -151,7 +139,7 @@ namespace Core.LanguageProcessing.CSharp
 		{
 		};
 			
-		public string[] TokensLiteralsBoolean = new string[] 
+		public string[] LiteralsBoolean = new string[] 
 		{
 			"true",
 			"false",
@@ -166,6 +154,45 @@ namespace Core.LanguageProcessing.CSharp
 		{
 			"\'",
 		};
+
+
+		partial void InitializeWhiteSpace();
+		partial void InitializePunctuatorsDelimiters();
+
+		public LexicalStructure()
+		{
+			InitializeWhiteSpace ();
+			InitializePunctuatorsDelimiters ();
+
+			return;
+		}
+
+		partial void InitializeWhiteSpace()
+		{
+			return;
+		}
+
+		partial void InitializePunctuatorsDelimiters()
+		{
+			PunctuatorsDelimiters = new string[] 
+			{
+				"(",	// 40
+				")",	// 41
+				",",	// 44
+				//".",	// 46
+				":",	// 58
+				";",	// 59
+				"<",	// 60
+				">",	// 62
+				"[",	// 91
+				"]",    // 93
+				"{",	// 123
+				"}",	// 125
+			};
+				
+			return;
+		}
+
 	}
 }
 

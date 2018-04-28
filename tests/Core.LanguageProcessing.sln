@@ -9,12 +9,18 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.LanguageProcessing", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.LanguageProcessing.CSharp", "..\source\Core.LanguageProcessing\Core.LanguageProcessing.CSharp\Core.LanguageProcessing.CSharp.csproj", "{F832AB6A-7237-4D4C-948B-6B02C842F0F5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.LanguageProcessing.Java", "..\source\Core.LanguageProcessing\Core.LanguageProcessing.Java\Core.LanguageProcessing.Java.csproj", "{7C187E80-B566-4D83-B43D-50E9BB41236B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7C187E80-B566-4D83-B43D-50E9BB41236B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C187E80-B566-4D83-B43D-50E9BB41236B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C187E80-B566-4D83-B43D-50E9BB41236B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C187E80-B566-4D83-B43D-50E9BB41236B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{90B32DED-628B-49A9-8AED-037E4E911C38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{90B32DED-628B-49A9-8AED-037E4E911C38}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{90B32DED-628B-49A9-8AED-037E4E911C38}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -31,6 +37,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{C9C215DA-4F81-4F81-9B05-AC64AD52114F} = {90538706-D9C8-4551-8227-12813F85FDF7}
 		{F832AB6A-7237-4D4C-948B-6B02C842F0F5} = {90538706-D9C8-4551-8227-12813F85FDF7}
+		{7C187E80-B566-4D83-B43D-50E9BB41236B} = {90538706-D9C8-4551-8227-12813F85FDF7}
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

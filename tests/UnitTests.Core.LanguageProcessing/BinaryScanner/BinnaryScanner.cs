@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.IO;
 
-using Core.LanguageProcessing;
+using Core.LanguageProcessing.Analysis.Lexical;
 
 namespace Consume.Core.LanguageProcessing
 {
-	public partial class ZeroOneScan :LexicalAnalyzerScanner
+	public partial class BinnaryScanner : LexicalAnalyzerScanner
 	{
 		
 	}

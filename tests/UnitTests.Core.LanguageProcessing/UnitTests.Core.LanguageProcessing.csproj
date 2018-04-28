@@ -48,15 +48,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="TestZeroOneScan\TestZeroOneScan.cs" />
-    <Compile Include="TestZeroOneScan\ZeroOneScan.cs" />
+    <Compile Include="BinaryScanner\BinnaryScanner.cs" />
+    <Compile Include="BinaryScanner\TestBinnaryScanner.cs" />
+    <Compile Include="CSharpScanner\TestCSharpScanner.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="TestZeroOneScan\" />
+    <Folder Include="BinaryScanner\" />
+    <Folder Include="CSharpScanner\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\source\Core.LanguageProcessing\Core.LanguageProcessing.csproj">

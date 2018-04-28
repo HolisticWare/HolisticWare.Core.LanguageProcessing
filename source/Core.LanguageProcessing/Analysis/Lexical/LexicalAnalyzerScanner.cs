@@ -7,7 +7,7 @@ using System.IO;
 using System.ComponentModel;
 using System.Text;
 
-namespace Core.LanguageProcessing
+namespace Core.LanguageProcessing.Analysis.Lexical
 {
 	public partial class LexicalAnalyzerScanner 
 		: 
@@ -50,9 +50,15 @@ namespace Core.LanguageProcessing
 			private set;
 		}
 
+		public LexicalStructure LexicalStructure
+		{
+			get;
+			set;
+		}
+
 		StringBuilder sb_token_lexem_current = null;
 
-		public IEnumerable<Token> Scan(TextReader reader) 
+		public IEnumerable<Lexeme> Scan(TextReader reader) 
 		{
 			char character_current_next = (char) reader.Peek ();
 			char character_current = default(char);
@@ -64,14 +70,14 @@ namespace Core.LanguageProcessing
 
 				character_current_next = (char) reader.Peek ();
 
-				if 
-					(
-						Character.IsWhiteSpace (character_current_next)
-					)
+				bool is_whitespace = LexicalStructure.IsWhiteSpace (character_current_next);
+				bool is_delimiter_punctutator = LexicalStructure.IsDelimiter (character_current_next);
+
+				if ( is_whitespace || is_delimiter_punctutator )
 				{
 					sb_token_lexem_current.Append (character_current);
 
-					Token token_lexem = new Token ()
+					Lexeme token_lexem = new Lexeme ()
 					{
 						Value = sb_token_lexem_current.ToString ()
 					};
@@ -81,7 +87,7 @@ namespace Core.LanguageProcessing
 
 			}
 
-			yield return default(Token);
+			yield return default(Lexeme);
 		}
 
 		private void Search(string searchText)

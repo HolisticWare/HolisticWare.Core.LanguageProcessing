@@ -6,14 +6,14 @@ using System.Reactive.Linq;
 
 using NUnit.Framework;
 
-using Core.LanguageProcessing;
+using Core.LanguageProcessing.Analysis.Lexical;
 
 using Consume.Core.LanguageProcessing;
 
 namespace UnitTests.Core.LanguageProcessing
 {
 	[TestFixture ()]
-	public class TestZeroOneScan
+	public class TestBinnaryScanner
 	{
 		string testcase = @"0 1 00 11";
 		
@@ -22,10 +22,14 @@ namespace UnitTests.Core.LanguageProcessing
 		{
 			TextReader tr = new StringReader (testcase);
 
-			ZeroOneScan scanner = new ZeroOneScan ();
-			IEnumerable<Token> tokens_enumerable = scanner.Scan (tr);
-
-			IObservable<Token> tokens = tokens_enumerable.ToObservable();
+			BinnaryScanner scanner = new BinnaryScanner ();
+			scanner.LexicalStructure = new LexicalStructure () 
+			{
+				WhiteSpace = new string[]{},
+				PunctuatorsDelimiters = new string[]{}
+			};
+			IEnumerable<Lexeme> tokens_enumerable = scanner.Scan (tr);
+			IObservable<Lexeme> tokens = tokens_enumerable.ToObservable();
 
 			tokens.Subscribe
 			(
@@ -43,6 +47,8 @@ namespace UnitTests.Core.LanguageProcessing
 					Console.WriteLine("Parsing Complete " );
 				}
 			);
+				
+			List<Lexeme> list = new List<Lexeme> (tokens_enumerable);
 
 			return;
 		}

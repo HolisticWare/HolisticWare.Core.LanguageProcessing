@@ -1,23 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Core.LanguageProcessing
+namespace Core.LanguageProcessing.Analysis.Lexical
 {
 	public partial class TokenStream 
 		: 
 		// IObservable<Token> 						// not recommended
 		// System.Reactive.Subjects.Subject<Token> 	// sealed class
-		IEnumerable<Token>
+		IEnumerable<Lexeme>
 	{
-		List<Token> token_list = new List<Token>();
+		List<Lexeme> token_list = new List<Lexeme>();
 
-		public Token this[int index]  
+		public Lexeme this[int index]  
 		{  
 			get { return token_list[index]; }  
 			set { token_list.Insert(index, value); }  
 		} 
 
-		public IEnumerator<Token> GetEnumerator()
+		public IEnumerator<Lexeme> GetEnumerator()
 		{
 			return token_list.GetEnumerator();
 		}
